@@ -1,22 +1,64 @@
 // Question 1
-function findPair(numbers, target) {
   // Your code here
-}
+  
+  function findPair(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = i + 1; j < arr.length; j++) {
+        if (arr[i] + arr[j] === target) {
+          return [arr[i], arr[j]];
+        }
+      }
+    }
+  
+    return null;
+  }
+  let numbers = [2, 4, 6, 8, 10];
+  let targetNumber = 14;
+  let pair = findPair(numbers, targetNumber);
+  
+  if (pair !== null) {
+    console.log('Pair found:', pair);
+  } else {
+    console.log('No pair found.');
+  }
+
 
 // Question 2
-function reverseString(str) {
-  // Your code here
-}
+let str = "Huzaifa";
+let reversedStr = reverseString(str);
 
+function reverseString(String) {
+    let reversedString = "";
+  
+    for (let i = String.length - 1; i >= 0; i--) {
+      reversedString += String.charAt(i);
+    }
+  
+    return reversedString;
+  }
+  console.log(reversedStr);
 // Question 3
 function sumLargest(numbers) {
   // Your code here
 }
 
 // Question 4
-function filterStrings(strings) {
-  // Your code here
+let inputArray = ["Karachi","Islamabad","Lahore","peshawar","Multan"];
+let filteredArray = filterStrings(inputArray);
+
+
+function filterStrings(arr) {
+  let filteredArray = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i].length > 3) {
+      filteredArray.push(arr[i]);
+    }
+  }
+
+  return filteredArray;
 }
+console.log(filteredArray);
 
 // Question 5
 function filterEven(numbers) {
@@ -29,9 +71,19 @@ function pluck(objects, key) {
 }
 
 // Question 7
-function isPalindrome(str) {
+
   // Your code here
-}
+let isPalin = isPalindrome(str)
+  function isPalindrome(inputString) {
+    var reversedString = '';
+  
+    for (var i = inputString.length - 1; i >= 0; i--) {
+      reversedString += inputString.charAt(i);
+    }
+  
+    return inputString === reversedString;
+  }
+  console.log(isPalin);
 
 // Question 8
 function mostFrequent(str) {
